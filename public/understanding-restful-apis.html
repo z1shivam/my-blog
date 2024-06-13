@@ -1,0 +1,36 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding RESTful APIs</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="font-lora dark:bg-slate-900 dark:text-white font-medium">
+    <header class="flex justify-between items-center max-w-3xl w-full  mx-auto px-4">
+      <nav>
+        <a href="/">Go Back</a>
+      </nav>
+      <div class="w-24 h-24 cursor-pointer flex justify-center items-center" id="dark-mode-switch">
+      <i class="fa-solid fa-lightbulb text-2xl " id="dark-mode-on"></i>
+      <i class="fa-regular fa-lightbulb text-2xl hidden" id="dark-mode-off"></i>
+    </div>
+    </header>
+    <main class="max-w-3xl w-full  mx-auto px-4">
+      <h1 class="text-xl py-4">Understanding RESTful APIs</h1>
+      <p>Hello again, tech enthusiasts! In today's post, we're going to dive into the world of RESTful APIs. If you've ever wondered how different applications communicate with each other over the internet, this post is for you. Let's break it down. What is an API? An API (Application Programming Interface) is a set of rules and definitions that allow different software applications to communicate with each other. Think of it as a bridge that connects various systems, enabling them to share data and functionalities. REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol — the HTTP. RESTful APIs are APIs that adhere to the REST architectural style. They use standard HTTP methods like GET, POST, PUT, DELETE to perform CRUD operations (Create, Read, Update, Delete) on resources. The main principles of REST include statelessness, client-server architecture, uniform interface, and layered system. Each resource in a RESTful API is identified by a unique URL. For example, in an e-commerce site, resources could be products, customers, orders, etc., each accessible via a specific URL. Benefits of RESTful APIs: 1. Scalability: RESTful APIs are stateless, meaning each request from a client contains all the information the server needs to fulfill it. This allows servers to handle multiple requests efficiently. 2. Flexibility: Clients and servers can be developed independently, as long as they adhere to the API contract. 3. Performance: By leveraging caching mechanisms, RESTful APIs can reduce server load and improve response times. To create a RESTful API, you typically start by defining your resources and designing the endpoints. You'll then choose a framework or tool to build your API. Popular choices include Express.js for Node.js, Django for Python, and Spring Boot for Java. Finally, you'll implement the CRUD operations and test your API using tools like Postman or curl. In future posts, we'll dive deeper into building and securing RESTful APIs, so stay tuned!</p>
+      <p>15 February 2021</p>
+    </main>
+  </body>
+  <script>
+  const gid = (id) => document.getElementById(id);
+  gid("dark-mode-switch")?.addEventListener("click", () => {
+    document.getElementsByTagName("html")[0].classList.toggle("dark");
+    gid("dark-mode-off")?.classList.toggle("hidden");
+    gid("dark-mode-on")?.classList.toggle("hidden");
+  });
+  </script>
+  </html>
+  

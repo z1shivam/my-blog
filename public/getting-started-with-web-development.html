@@ -1,0 +1,36 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Web Development</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="font-lora dark:bg-slate-900 dark:text-white font-medium">
+    <header class="flex justify-between items-center max-w-3xl w-full  mx-auto px-4">
+      <nav>
+        <a href="/">Go Back</a>
+      </nav>
+      <div class="w-24 h-24 cursor-pointer flex justify-center items-center" id="dark-mode-switch">
+      <i class="fa-solid fa-lightbulb text-2xl " id="dark-mode-on"></i>
+      <i class="fa-regular fa-lightbulb text-2xl hidden" id="dark-mode-off"></i>
+    </div>
+    </header>
+    <main class="max-w-3xl w-full  mx-auto px-4">
+      <h1 class="text-xl py-4">Getting Started with Web Development</h1>
+      <p>Hey everyone! This is my first blog post, and I'm super excited to share my journey into the world of web development with you. 🌐 I hope you enjoy it and find it helpful! Web development is an incredibly dynamic and rapidly growing field. Whether you're looking to create a personal blog, an e-commerce site, or a web application, understanding the basics of web development is essential. In this post, I'll cover some fundamental concepts and provide you with a roadmap to get started. Understanding the Basics HTML (HyperText Markup Language): HTML is the backbone of any website. It's used to structure content on the web. Think of it as the skeleton of your web page. You'll use HTML to create headings, paragraphs, lists, links, and more. CSS (Cascading Style Sheets): CSS is what makes your website look beautiful. It controls the layout, colors, fonts, and overall visual appearance of your site. While HTML structures the content, CSS styles it. JavaScript: JavaScript is the brain of your website. It adds interactivity and functionality. Want a button that changes color when clicked or a form that validates user input? JavaScript is your go-to. Getting Started Step 1: Learn the Basics of HTML, CSS, and JavaScript: Start with free resources like Mozilla Developer Network (MDN) and W3Schools. Practice by building simple web pages and gradually move to more complex projects. Step 2: Set Up Your Development Environment: Install a code editor like Visual Studio Code. Learn to use version control systems like Git and platforms like GitHub to manage your code. Step 3: Build Projects: Apply what you've learned by building projects. Start small—a personal blog or portfolio site—and then tackle larger projects. Step 4: Join the Community: Participate in forums, join developer communities, and follow web development blogs. Engaging with the community can provide support, inspiration, and feedback. Step 5: Keep Learning: Web development is constantly evolving. Stay updated with the latest trends and technologies by taking courses, reading articles, and experimenting with new tools. Thanks for reading! I hope this post helps you take your first steps into web development. Stay tuned for more posts where we'll dive deeper into specific topics. Happy coding! 😊</p>
+      <p>01 January 2021</p>
+    </main>
+  </body>
+  <script>
+  const gid = (id) => document.getElementById(id);
+  gid("dark-mode-switch")?.addEventListener("click", () => {
+    document.getElementsByTagName("html")[0].classList.toggle("dark");
+    gid("dark-mode-off")?.classList.toggle("hidden");
+    gid("dark-mode-on")?.classList.toggle("hidden");
+  });
+  </script>
+  </html>
+  

@@ -1,0 +1,36 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Version Control with Git</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="font-lora dark:bg-slate-900 dark:text-white font-medium">
+    <header class="flex justify-between items-center max-w-3xl w-full  mx-auto px-4">
+      <nav>
+        <a href="/">Go Back</a>
+      </nav>
+      <div class="w-24 h-24 cursor-pointer flex justify-center items-center" id="dark-mode-switch">
+      <i class="fa-solid fa-lightbulb text-2xl " id="dark-mode-on"></i>
+      <i class="fa-regular fa-lightbulb text-2xl hidden" id="dark-mode-off"></i>
+    </div>
+    </header>
+    <main class="max-w-3xl w-full  mx-auto px-4">
+      <h1 class="text-xl py-4">Introduction to Version Control with Git</h1>
+      <p>Greetings, fellow coders! Today, we're going to explore one of the most essential tools in a developer's toolkit: Git. If you're serious about coding, understanding version control is crucial, and Git is the most widely used version control system out there. So, let's get started! Version control systems help you manage changes to your codebase over time. They allow you to track revisions, collaborate with others, and revert to previous versions if something goes wrong. Git, created by Linus Torvalds, is a distributed version control system, meaning every developer has a complete copy of the repository history on their local machine. This provides a high level of redundancy and flexibility. ### Key Concepts of Git 1. **Repository:** A Git repository (or repo) is a directory that contains all your project files and the entire history of changes made to those files. 2. **Commit:** A commit is a snapshot of your repo at a specific point in time. Each commit has a unique identifier (a hash) and a commit message that describes the changes. 3. **Branch:** Branches allow you to develop features or fix bugs in isolation from the main codebase. The default branch is usually called 'main' or 'master'. 4. **Merge:** Merging is the process of integrating changes from one branch into another. 5. **Pull Request:** A pull request (or merge request) is a way to propose changes to the codebase and have them reviewed before merging. ### Getting Started with Git 1. **Installation:** First, install Git on your machine. You can download it from [git-scm.com](https://git-scm.com/). 2. **Initial Setup:** Configure Git with your name and email using the following commands: `git config --global user.name "Your Name"` `git config --global user.email "your.email@example.com"` 3. **Creating a Repo:** Navigate to your project directory and initialize a Git repository: `git init` 4. **Making Changes:** Add your project files and make your first commit: `git add .` `git commit -m "Initial commit"` 5. **Branching and Merging:** Create a new branch, make changes, and merge it back to the main branch: `git checkout -b new-feature` `git commit -am "Add new feature"` `git checkout main` `git merge new-feature` 6. **Pushing to Remote:** Connect to a remote repository (like GitHub) and push your changes: `git remote add origin https://github.com/yourusername/yourrepo.git` `git push -u origin main` Understanding and mastering Git takes time and practice, but it's an invaluable skill for any developer. Happy coding, and see you in the next post!</p>
+      <p>10 March 2021</p>
+    </main>
+  </body>
+  <script>
+  const gid = (id) => document.getElementById(id);
+  gid("dark-mode-switch")?.addEventListener("click", () => {
+    document.getElementsByTagName("html")[0].classList.toggle("dark");
+    gid("dark-mode-off")?.classList.toggle("hidden");
+    gid("dark-mode-on")?.classList.toggle("hidden");
+  });
+  </script>
+  </html>
+  
